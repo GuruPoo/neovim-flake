@@ -1,8 +1,7 @@
-{ pkgs ? import <nixpkgs> {}, inputs, plugins, lib ? pkgs.lib, ... }:
+{ pkgs, inputs, plugins, lib ? pkgs.lib, ... }:
 
 final: prev:
 
-with pkgs;
 with lib;
 with builtins;
 
@@ -71,7 +70,7 @@ let
     buildVimPluginFrom2Nix {
       pname = name;
       version = "master";
-      src = getAttr name inputs;
+      src = builtins.getAttr name inputs;
       preFixup = let
         writeIf = cond: msg: if cond then msg else "";
         in ''

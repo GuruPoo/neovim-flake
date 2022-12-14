@@ -530,11 +530,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1671005168,
-        "narHash": "sha256-pRlXkCJrgntxSCPcAE83KyERUo56FxLycVCZUlCc1zU=",
+        "lastModified": 1671035236,
+        "narHash": "sha256-RPLAje85GHjStSsY6tkmvgFtPQtCicIyAlp10uobyl4=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "d31c71c959348b7b15f7e69608a47aea05ed7bc6",
+        "rev": "6ed8a41bd594e14652318650a83442d385b193a9",
         "type": "github"
       },
       "original": {
@@ -778,11 +778,11 @@
     "todo-comments": {
       "flake": false,
       "locked": {
-        "lastModified": 1668584548,
-        "narHash": "sha256-8RP0vtz0wj9d2rz4WY+cTOCui9k56Hsa8glBXPaK0ZM=",
+        "lastModified": 1671040364,
+        "narHash": "sha256-5BiXbxdoRQh83XE7zherFJmj238odr5kR5Yl7hbo9mQ=",
         "owner": "folke",
         "repo": "todo-comments.nvim",
-        "rev": "1b9df577262b2c4c4ea422161742927f80ffa131",
+        "rev": "c1760010f46992165995aaa52ca967f473a2e8e6",
         "type": "github"
       },
       "original": {

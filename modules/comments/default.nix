@@ -3,7 +3,7 @@
 with lib;
 
 let
-  cfg = config.vim.comments;
+  cfg = config.vim.comments;  
 in
 {
   options.vim.comments = {
@@ -24,7 +24,9 @@ in
     {
       vim.startPlugins = [ pkgs.neovimPlugins.${cfg.type} ];
 
-      vim.luaConfigRC = ''
+      vim.luaConfigRC = let
+        writeIf = cond: msg: if cond then msg else "";
+        in ''
         ${writeIf (cfg.type == "kommentary") ''
           -- Kommentary config
           require('kommentary.config').setup();
