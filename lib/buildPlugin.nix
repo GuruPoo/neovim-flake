@@ -4,7 +4,7 @@ final: prev:
 
 with pkgs;
 with lib;
-# with builtins;
+with builtins;
 
 let
   inherit (prev.vimUtils) buildVimPluginFrom2Nix;  
@@ -70,7 +70,7 @@ let
     buildVimPluginFrom2Nix {
       pname = name;
       version = "master";
-      src = getAttr name inputs;
+      src = builtins.getAttr name inputs;
       preFixup = let
         writeIf = cond: msg: if cond then msg else "";
         in ''
