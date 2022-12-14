@@ -2,7 +2,7 @@
 
 final: prev:
 
-with pkgs;
+# with pkgs;
 with lib;
 with builtins;
 
@@ -70,7 +70,7 @@ let
     buildVimPluginFrom2Nix {
       pname = name;
       version = "master";
-      src = builtins.getAttr name inputs;
+      src = getAttrs name inputs;
       preFixup = let
         writeIf = cond: msg: if cond then msg else "";
         in ''
