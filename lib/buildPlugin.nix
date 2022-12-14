@@ -1,12 +1,13 @@
-{ pkgs, inputs, plugins, lib ? pkgs.lib, ... }:
+{ pkgs ? import <nixpkgs> {}, inputs, plugins, lib ? pkgs.lib, ... }:
 
 final: prev:
 
-# with pkgs;
+with pkgs;
 with lib;
 with builtins;
 
 let
+  inherit (builtins) getAttr;
   inherit (prev.vimUtils) buildVimPluginFrom2Nix;  
   
   ts = final.tree-sitter;
