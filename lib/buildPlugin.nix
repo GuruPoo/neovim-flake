@@ -70,7 +70,7 @@ let
     buildVimPluginFrom2Nix {
       pname = name;
       version = "master";
-      src = getAttrs name inputs;
+      src = getAttr name inputs;
       preFixup = let
         writeIf = cond: msg: if cond then msg else "";
         in ''
